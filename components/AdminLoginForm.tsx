@@ -15,12 +15,14 @@ export default function AdminLoginForm() {
       username,
       password,
       redirect: false,
+    }).catch((error) => {
+      console.log(`error ${error}`);
     });
     console.log(`result ${result} ${username} ${password}`);
     if (result?.ok) {
       router.push("/admin-dashboard");
     } else {
-      alert("Login failed. Please check your credentials.");
+      console.log(`error ${result}`);
     }
   };
 
