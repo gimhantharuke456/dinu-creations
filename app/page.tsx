@@ -5,12 +5,14 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import DinuEventsGrid from "@/components/DinuEventsGrid";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import GaelleryDinuCreations from "@/components/GalleryDinuCreations";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import DinuCreationsGrid from "@/components/DinuCreationsGrid";
+import Reviews from "@/components/Reviews";
+import GalleryEventsByDinu from "@/components/GalleryEventsByDinu";
+import SiteDescriptionGrid from "@/components/SiteDescriptionGrid";
 
 const Home = () => {
   return (
@@ -18,12 +20,11 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <DinuEventsGrid />
-        <DinuCreationsGrid />
+        <SiteDescriptionGrid />
         <GaelleryDinuCreations />
-        <Clients />
-        <Experience />
-        <Approach />
+        <GalleryEventsByDinu />
+        <Reviews />
+        {/* <Approach /> */}
         <Footer />
       </div>
     </main>

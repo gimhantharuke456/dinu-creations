@@ -1,10 +1,9 @@
 import { link } from "fs";
 
 export const navItems = [
-  { name: "Dinu Creations", link: "#dinu-creations" },
-  { name: "Dinu Events", link: "#dinue-events" },
+  { name: "About Us", link: "#about-us" },
   { name: "Gallery", link: "#gallery" },
-  { name: "Our Works", link: "#our-works" },
+  { name: "Our Clients", link: "#our-clients" },
   { name: "Contact", link: "#contact" },
 ];
 

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { PinContainer } from "./ui/Pin";
 import axios from "axios";
 
-const GaelleryDinuCreations = () => {
+const GalleryEventsByDinu = () => {
   const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -17,7 +17,7 @@ const GaelleryDinuCreations = () => {
         const allItems = response.data;
         // Filter items to only show "dinu creations" category
         const dinuCreations = allItems.filter(
-          (item: GalleryItem) => item.category === "dinu creations"
+          (item: GalleryItem) => item.category === "events by dinu"
         );
         setGalleryItems(dinuCreations);
         setLoading(false);
@@ -43,7 +43,7 @@ const GaelleryDinuCreations = () => {
     <div id="gallery" className="py-20">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-purple">recent works (Dinu Creations)</span>
+        <span className="text-purple">recent works (Events by Dinu)</span>
       </h1>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
@@ -84,4 +84,4 @@ const GaelleryDinuCreations = () => {
   );
 };
 
-export default GaelleryDinuCreations;
+export default GalleryEventsByDinu;
