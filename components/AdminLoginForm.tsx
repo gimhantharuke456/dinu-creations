@@ -16,11 +16,10 @@ export default function AdminLoginForm() {
       password,
       redirect: false,
     });
-
+    console.log(`result ${result} ${username} ${password}`);
     if (result?.ok) {
       router.push("/admin-dashboard");
     } else {
-      console.log(result);
       alert("Login failed. Please check your credentials.");
     }
   };
