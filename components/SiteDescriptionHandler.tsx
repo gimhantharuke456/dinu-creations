@@ -83,7 +83,9 @@ const SiteDescriptionHandler: React.FC = () => {
   return (
     <div>
       <Title>Site Description Handler</Title>
-
+      <Button type="primary" onClick={() => setIsModalVisible(true)}>
+        Add New Description
+      </Button>
       {descriptions.map((description) => (
         <Card
           key={description._id}
@@ -127,10 +129,7 @@ const SiteDescriptionHandler: React.FC = () => {
             label="Section"
             rules={[{ required: true }]}
           >
-            <Select>
-              <Option value="dinu creations">Dinu Creations</Option>
-              <Option value="events by dinu">Events by Dinu</Option>
-            </Select>
+            <Input />
           </Form.Item>
           <Form.Item
             name="description"

@@ -53,25 +53,26 @@ const SiteDescriptionGrid: React.FC = () => {
 
   return (
     <section id="about-us" className="w-full py-20 text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="flex flex-col gap-8">
         {descriptions.map((description, i) => (
           <div
             key={description._id}
             className={cn(
-              "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4",
-              "bg-[linear-gradient(90deg,_rgba(4,7,29,1)_0%,_rgba(12,14,35,1)_100%)]"
+              "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col md:flex-row",
+              "bg-[linear-gradient(90deg,_rgba(4,7,29,1)_0%,_rgba(12,14,35,1)_100%)]",
+              { "md:flex-row-reverse": i % 2 === 1 }
             )}
           >
             {description.imagePath && (
-              <div className="absolute inset-0 w-full h-full">
+              <div className="w-full md:w-1/2 mx-h-64 md:h-auto">
                 <img
                   src={description.imagePath}
                   alt={description.section}
-                  className="object-cover object-center w-full h-full opacity-20"
+                  className="object-cover object-center w-full h-full"
                 />
               </div>
             )}
-            <div className="relative z-10 h-full flex flex-col p-5 lg:p-10">
+            <div className="relative z-10 h-full flex flex-col p-5 lg:p-10 w-full md:w-1/2">
               <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold mb-4">
                 {capitalizeWords(description.section)}
               </div>
