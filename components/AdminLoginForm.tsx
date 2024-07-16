@@ -20,7 +20,7 @@ export default function AdminLoginForm() {
     if (result?.ok) {
       router.push("/admin-dashboard");
     } else {
-      console.log(JSON.stringify(result));
+      console.log(result);
       alert("Login failed. Please check your credentials.");
     }
   };
