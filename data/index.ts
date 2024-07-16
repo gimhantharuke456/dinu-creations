@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "Dinu Creations", link: "#dinu-creations" },
   { name: "Dinu Events", link: "#dinue-events" },
@@ -268,14 +270,23 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/5968776.png",
+    link: "https://www.instagram.com/dinucreations_?igsh=ZmtxcnJoMTJocG5v",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/facebook_icon.webp",
+    link: "https://www.facebook.com/dinucreationslk?mibextid=LQQJ4d",
+  },
+
+  {
+    id: 5,
+    img: "/5968776.png",
+    link: "https://www.instagram.com/events_by_dinu?igsh=MXdpOW5xeHlqeXN5Yg==",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/facebook_icon.webp",
+    link: "https://www.facebook.com/eventsbydinu?mibextid=LQQJ4d",
   },
 ];

@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
+import GaelleryDinuCreations from "@/components/GalleryDinuCreations";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import DinuCreationsGrid from "@/components/DinuCreationsGrid";
 
@@ -20,11 +20,11 @@ const Home = () => {
         <Hero />
         <DinuEventsGrid />
         <DinuCreationsGrid />
-        {/* <RecentProjects />
+        <GaelleryDinuCreations />
         <Clients />
         <Experience />
         <Approach />
-        <Footer /> */}
+        <Footer />
       </div>
     </main>
   );
